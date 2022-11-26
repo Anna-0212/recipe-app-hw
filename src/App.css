@@ -16,12 +16,13 @@ video {
   align-items: center;
 }
 .container-input {
-  display: flex;
-  justify-content: center;
+  display: flex; 
+  justify-content: center; 
   margin-bottom: 30px;
+  width: 40%;
 }
 .icons {
-  width: 30px;
+  width: 32px;
 }
 .container-recipe {
   display: flex;
@@ -93,7 +94,7 @@ li:hover {
   transform: scale(1.1);
 }
 .search {
-  width: 90%;
+  width: 50%;
   padding: 12px 24px;
   font-size: 14px;
   line-height: 18px;
