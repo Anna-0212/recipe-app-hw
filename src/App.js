@@ -51,19 +51,18 @@ function App() {
         <h2>Find a Recipe</h2>
       </div>
 
-      <div className="container-input">
-        <form onSubmit={finalSearch}>
+      <div className="container">
+        <form onSubmit={finalSearch}  className="container-input">
           <input className="search" placeholder='Search...' onChange={myRecipeSearch} value={mySearch}></input>
+          <button type="submit">
+            <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" className="icons" alt="search"/>
+          </button>
         </form>
-
-        <button>
-          <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" className="icons" alt="search"/>
-        </button>
       </div>
 
       <div className='container'> 
-        {myRecipes.map(element => (
-          <MyRecipesComponent 
+        {myRecipes.map((element, index) => (
+          <MyRecipesComponent key={index}
           label={element.recipe.label} 
           cuisine={element.recipe.cuisineType}
           image={element.recipe.image} 
